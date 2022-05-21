@@ -64,7 +64,7 @@ public class Sketch extends PApplet {
         //this tells user the mouse and grid coordinates of the mouse when clicked
         if(mouseX > intColumn * (Cell_Height + Margin) + Margin && mouseX < intColumn * (Cell_Height + Margin) + Margin + Cell_Height && mouseY > intRow * (Cell_Width + Margin) + Margin && mouseY < intRow * (Cell_Width + Margin) + Cell_Width + Margin) {
           System.out.println(" ");
-          System.out.println("mouse coordinates: (" + mouseX + ", " + mouseY + ") ; grid coordinates: (row:" + (intRow + 1) + ", column: " + (intColumn + 1) + ")");
+          System.out.println("mouse coordinates: (" + mouseX + ", " + mouseY + ") ; grid coordinates: (row:" + intRow + ", column: " + intColumn + ")");
         
         
           //determines whether the clicked block turns green and determines if the left, right, top, and down of the clicked block will be green
@@ -426,6 +426,7 @@ public class Sketch extends PApplet {
 
       //output
       System.out.println("Row " + intRow + " has " + rowNumber + " cells selected");
+      rowNumber = 0;
       if(contGreen > 2 && intRow > 0) {
         System.out.println("There are " + contGreen + " continous blocks selected on row " + intRow + ".");
         contGreen = 0;
